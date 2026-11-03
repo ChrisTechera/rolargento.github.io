@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Juegos de rol hechos en Argentina</title>
+<meta name="description" content="Vidriera de juegos de rol de mesa independientes de Argentina: descubrí juegos, descargalos y conocé a sus creadores.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- ============ DATOS (editar solo esta parte para agregar contenido) ============ -->
+<!-- ESTUDIOS: links[].type = "web" | "instagram". Para sumar un estudio, agregar un objeto. -->
+<script type="application/json" id="data-studios">
+[
+ {"id":"merilin","name":"Merilin Creative Studio","logo":"https://ugc.production.linktr.ee/9f41ab7f-e06f-4cd5-9a23-499f330e9356_Solo-oveja-avatar-cuadrado.png?io=true&size=avatar-v3_0","desc":"Estudio creativo, publicamos juegos de rol, aventuras y recursos creados 100% con nuestras manos","links":[
+  {"type":"web","url":"https://merilin-creative.itch.io/"},
+  {"type":"instagram","url":"https://www.instagram.com/merilincreativestudio/"}]},
+ {"id":"dadosndrama","name":"Dados N’Drama","logo":"https://img.itch.zone/aW1nLzIxMzAyMjc5LnBuZw==/80x80%23/mZJAQt.png","desc":"Que el rolcito y el morfi nunca falte. Diviértanse y disfruten del viaje","links":[
+  {"type":"web","url":"https://dadosndrama.itch.io/"},
+  {"type":"instagram","url":"https://www.instagram.com/dadosndrama/"}]},
+ {"id":"nastytwenty","name":"Nasty Twenty","logo":"https://cdn.beacons.ai/user_content/KsnhoQTY2dYmuSyt1HLJIzHTxdG3/referenced_images/8b0bd073-5726-4937-b4e9-b0e3a29738af__user_content/KsnhoQTY2dYmuSyt1HLJIzHTxdG3/profile_nastytwenty__fe8a08ae-29a2-49cc-916e-274dc31a1944.webp?t=1790197006549","desc":"Diseño recursos roleros, hago ilustraciones de pj y hablo de juegos de rol","links":[
+  {"type":"web","url":"https://nastytwenty.empretienda.com.ar/"},
+  {"type":"instagram","url":"https://www.instagram.com/nasty.twenty/"}]},
+ {"id":"jennjones","name":"Jenn Jones - Baby Orlok","logo":"https://img.itch.zone/aW1nLzExNzYzNzY5LnBuZw==/80x80%23/kqwSDB.png","desc":"Arte,Fanzines y Juegos . Recursos para la mesa y herramientas de seguridad","links":[
+  {"type":"web","url":"https://jennjones.itch.io/"},
+  {"type":"instagram","url":"https://www.instagram.com/baby.orlok/"}]},
+ {"id":"ikigai","name":"Matías Aranda – Ikigai Coop","logo":"https://img.itch.zone/aW1nLzMwMTY4NTM1LnBuZw==/80x80%23/oKnvBC.png","desc":"Game Designer & Godot Dev en Ikigai. Caos en estado lúdico","links":[
+  {"type":"web","url":"https://dest-er.itch.io/"},
+  {"type":"instagram","url":"https://www.instagram.com/dest_ino/"}]},
+ {"id":"pocho","name":"Pocho","logo":"https://ugc.production.linktr.ee/30d8df4d-2b0c-4cad-9553-482dc9cc7caf_2.png?io=true&size=avatar-v3_0","desc":"Hobbit patagónico platense, Lic. Diseño MM - UNLP, gaymaster, historietista.","links":[
+  {"type":"instagram","url":"https://www.instagram.com/lapocho.rolea/","label":"@lapocho.rolea"},
+  {"type":"instagram","url":"https://www.instagram.com/pocho_y_sus_depresaurios/","label":"@pocho_y_sus_depresaurios"}]},
+ {"id":"gimenez","name":"Tomás Giménez Rioja","logo":"https://img.itch.zone/aW1nLzEzMTg3NDc1LmpwZw==/80x80%23/ssG5QQ.jpg","desc":"Creador de juegos. Podcaster, escritor, analista y otras cosas nerdas.","links":[
+  {"type":"web","url":"https://tgimenezrgm.itch.io/"},
+  {"type":"instagram","url":"https://www.instagram.com/tgimenezrgm/"}]},
+ {"id":"weakstring","name":"Weakstring","logo":"https://cdn.bsky.app/img/avatar/plain/did:plc:rlqhtppb754hrf4opw62ivbh/bafkreic7jfhsznobw73hbvqavhfeqja3eyn24kmtynxzmjoiq4mtgeahe4","desc":"Cazadore de mitos interminables sobre cosas ya en desuso y culturas extinguidas. Autista Rolere con TDAH","links":[
+  {"type":"web","url":"https://farheim.weakstring.com.ar/"},
+  {"type":"instagram","url":"https://www.instagram.com/weakstring/"}]},
+ {"id":"estacion","name":"La Estación de Rol","logo":"https://cdn.allmylinks.com/prod/User/photo/4/G/T/yxeOIKpQQrWBYRadszlry_ZqQxEanwND.jpg","desc":"Juegos de rol en eventos. Creadores de Rol al Paso","links":[
+  {"type":"web","url":"https://laestacionderol.itch.io/"},
+  {"type":"instagram","url":"https://www.instagram.com/laestacionderol/"}]},
+ {"id":"entregallos","name":"Entregallos.co","logo":"https://entregallos.netlify.app/img/hero-gallo.webp","desc":"SAGA, Señora Royale, Devotio y otros delirios en camino.","links":[
+  {"type":"web","url":"https://entregallos.netlify.app/"},
+  {"type":"instagram","url":"https://www.instagram.com/entregallos.co/"}]},
+ {"id":"krozmic","name":"Krozmic","logo":"https://img.itch.zone/aW1nLzI5NzQ4MzM5LnBuZw==/80x80%23/XiUbTx.png","desc":"Ilustrador Freelance, Artista Digital, Diseñador.","links":[
+  {"type":"web","url":"https://krozmic.itch.io/elxir-hadamuerte"},
+  {"type":"instagram","url":"https://www.instagram.com/krozmic.art/"}]}
+]
+</script>
+<!-- JUEGOS: "demo":true marca contenido de ejemplo. Reemplazar por juegos reales:
+     title, studio (id de estudio), desc, cover (URL de imagen, opcional), url (página de descarga). -->
+<script type="application/json" id="data-games">
+[
+ {"title":"Michi Magic Detectives","studio":"merilin","desc":"","cover":"https://img.itch.zone/aW1nLzI2MTMwOTI4LnBuZw==/original/diJxQy.png","url":"https://merilin-creative.itch.io/michi-magic-detectives"},
+ {"title":"Farheim","studio":"weakstring","desc":"","cover":"https://farheim.weakstring.com.ar/logo.svg","url":"https://farheim.weakstring.com.ar/"},
+ {"title":"Aguará Guazú: El llamado","studio":"jennjones","desc":"","cover":"https://img.itch.zone/aW1nLzMwMDgwNTY4LnBuZw==/315x250%23c/JSL9d3.png","url":"https://jennjones.itch.io/aguara-guazu-el-llamado"},
+ {"title":"Rush & Punch!","studio":"gimenez","desc":"","cover":"https://cdn.rpg-trader.com/products/8126/images/1786990063912-festival-img.jpeg","url":"https://tgimenezrgm.itch.io/rush-n-punch-quickstart"},
+ {"title":"Saga","studio":"entregallos","desc":"","cover":"https://entregallos.netlify.app/img/saga-tile.webp","url":"https://entregallos.itch.io/saga"},
+ {"title":"Elixir","studio":"krozmic","desc":"","cover":"https://img.itch.zone/aW1nLzI5OTA4MjE3LnBuZw==/original/NxxZc4.png","url":"https://krozmic.itch.io/elxir-hadamuerte"},
+ {"title":"Furia Verde","studio":"ikigai","desc":"","cover":"https://img.itch.zone/aW1nLzMwMDc1MTM1LnBuZw==/original/Zfqv2y.png","url":"https://dest-er.itch.io/furia-verde"},
+ {"title":"Dracma","studio":"merilin","desc":"","cover":"https://img.itch.zone/aW1hZ2UvNTAzMzc3OC8zMDE0MTU3OC5wbmc=/347x500/J0uW7E.png","url":"https://merilin-creative.itch.io/dracma"},
+ {"title":"Gyro","studio":"gimenez","desc":"","cover":"https://img.itch.zone/aW1hZ2UvNTAzNDA0My8zMDE0MzMwNi5qcGc=/original/gjsf2L.jpg","url":"https://tgimenezrgm.itch.io/gyro"},
+ {"title":"Colección Espadas","studio":"dadosndrama","desc":"","cover":"https://img.itch.zone/aW1nLzI3MDQwNTk2LnBuZw==/347x500/zozhqN.png","url":"https://dadosndrama.itch.io/espadas-coleccion-uno"}
+]
+</script>
+<!-- ============ FIN DE DATOS ============ -->
+
+<style>
+:root{
+  --bg:#0c0e14; --surface:#141824; --surface-2:#1b2132; --line:#2a3148;
+  --text:#ece8df; --muted:#9aa1b5; --accent:#7fc8f0; --accent-ink:#06121b;
+  --r:10px; color-scheme:dark;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.6 "Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1200px,100% - 2.5rem);margin-inline:auto}
+svg.i{width:1.1em;height:1.1em;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(12,14,20,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:60px;gap:1rem}
+.brand{font:800 1.05rem "Bricolage Grotesque",sans-serif;text-decoration:none;letter-spacing:-.01em}
+nav{display:flex;gap:.25rem}
+nav a{text-decoration:none;color:var(--muted);padding:.6rem .9rem;border-radius:8px;font-weight:500;transition:color .2s,background .2s}
+nav a:hover{color:var(--text);background:var(--surface)}
+
+.hero{padding:clamp(3rem,9vw,6.5rem) 0 clamp(2rem,5vw,3.5rem);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-8%;top:-30%;width:min(560px,70vw);aspect-ratio:1;border:25px solid var(--line);border-radius:50%;box-shadow:0 0 0 40px rgba(127,200,240,.03),0 0 0 41px #F6B40E,0 0 0 100px rgba(127,200,240,.02);pointer-events:none}
+h1,h2{font-family:"Bricolage Grotesque","Arial Narrow",sans-serif;margin:0;line-height:1.02;letter-spacing:-.025em;text-transform:uppercase;font-weight:800}
+h1{font-size:clamp(2.6rem,8.5vw,6.4rem);max-width:13ch;position:relative;z-index:1}
+h1 span{color:var(--accent);display:block}
+.lead{max-width:62ch;color:var(--muted);font-size:clamp(1rem,2.2vw,1.15rem);margin:1.5rem 0 0;position:relative;z-index:1}
+section.block{padding:clamp(2rem,5vw,3.5rem) 0}
+h2{font-size:clamp(1.9rem,5vw,3.2rem)}
+.sec-head{margin-bottom:2rem;display:grid;gap:.9rem}
+.sec-head p{margin:0;max-width:62ch;color:var(--muted)}
+.sec-head+.grid{margin-top:0}
+
+.grid{display:grid;gap:1.25rem}
+.games{display:flex;gap:1.25rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:.25rem}
+.games::-webkit-scrollbar{display:none}
+.games .card{flex:0 0 min(78%,240px);scroll-snap-align:start}
+.rail-ctl{display:flex;justify-content:flex-end;gap:.5rem;margin-bottom:1rem}
+.rail-ctl button{width:44px;height:44px;border-radius:8px;border:1px solid var(--line);background:transparent;color:var(--text);display:grid;place-items:center;cursor:pointer;transition:border-color .2s,color .2s}
+.rail-ctl button:hover{border-color:var(--accent);color:var(--accent)}
+.studios{grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s ease,border-color .25s ease}
+.card:hover{transform:translateY(-3px);border-color:var(--accent)}
+.cover{aspect-ratio:3/4;position:relative;overflow:hidden;background:var(--surface-2)}
+.cover img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.card:hover .cover img{transform:scale(1.04)}
+.cover .ph{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:1rem;font:800 1.5rem/1.05 "Bricolage Grotesque",sans-serif;color:rgba(255,255,255,.92)}
+.tag{position:absolute;top:.7rem;left:.7rem;background:rgba(12,14,20,.8);border:1px solid var(--line);color:var(--muted);font-size:.78rem;padding:.2rem .6rem;border-radius:99px}
+.body{padding:1rem 1.1rem 1.15rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.body h3{margin:0;font:700 1.15rem/1.2 "Bricolage Grotesque",sans-serif}
+.author{color:var(--accent);font-size:.9rem;font-weight:500}
+.desc{margin:0;color:var(--muted);font-size:.92rem;line-height:1.5}
+.spacer{flex:1}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:44px;padding:.6rem 1.1rem;border-radius:8px;font-weight:600;font-size:.9rem;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.btn.primary{background:var(--accent);color:var(--accent-ink);margin-top:.5rem}
+.btn.primary:hover{background:#a6dcf6}
+.btn.primary:active{transform:scale(.98)}
+.btn.ghost{border-color:var(--line);color:var(--text);background:transparent}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn[aria-disabled="true"]{background:var(--surface-2);color:var(--muted);pointer-events:none}
+
+.studio{padding:1.25rem;gap:1rem}
+.s-top{display:flex;align-items:center;gap:1rem}
+.logo{width:56px;height:56px;border-radius:12px;flex:none;display:grid;place-items:center;font:800 1.25rem "Bricolage Grotesque",sans-serif;color:#fff;overflow:hidden}
+.logo img{width:100%;height:100%;object-fit:cover}
+.studio h3{margin:0;font:700 1.2rem/1.15 "Bricolage Grotesque",sans-serif}
+.actions{display:flex;flex-wrap:wrap;gap:.6rem}
+.actions .btn{flex:1 1 auto}
+
+footer{border-top:1px solid var(--line);margin-top:3rem;padding:2rem 0 2.5rem;color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:.75rem 2rem;justify-content:space-between}
+footer p{margin:0;max-width:60ch}
+
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hero h1,.hero .lead{animation:rise .7s ease both}.hero .lead{animation-delay:.12s}
+@media (max-width:520px){nav a{padding:.6rem .6rem}.hero::after{opacity:.5}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio">Rol Argentino Independiente</a>
+    <nav aria-label="Secciones"><a href="#juegos">Juegos</a><a href="#creadores">Creadores</a></nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="hero"><div class="wrap">
+    <h1><span>Juegos de Rol</span> hechos en <span>Argentina</span></h1>
+    <p class="lead">Una selección de juegos de rol creados por diseñadores y colectivos independientes de Argentina. Explorá nuevos mundos, descubrí propuestas originales y descargá los juegos directamente desde los enlaces de sus creadores.</p>
+  </div></div>
+
+  <section class="block" id="juegos" aria-labelledby="t-juegos"><div class="wrap">
+    <div class="sec-head"><h2 id="t-juegos" class="sr" style="position:absolute;left:-9999px">Juegos</h2></div>
+    <div class="rail-ctl"><button type="button" id="prev" aria-label="Juegos anteriores"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button><button type="button" id="next" aria-label="Juegos siguientes"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button></div>
+    <div class="games" id="games" role="region" aria-label="Juegos destacados"></div>
+  </div></section>
+
+  <section class="block" id="creadores" aria-labelledby="t-creadores"><div class="wrap">
+    <div class="sec-head">
+      <h2 id="t-creadores">Conocé a sus creadores</h2>
+      <p>Detrás de cada juego hay un equipo de personas creando mundos, historias y experiencias. Conocé los estudios y colectivos independientes que forman parte de la escena rolera argentina.</p>
+    </div>
+    <div class="grid studios" id="studios"></div>
+  </div></section>
+</main>
+
+<footer><div class="wrap">
+<p>Todos estos juegos fueron hechos por humanos.</p>
+  <p>"El mal no puede crear nada nuevo, solo corromper o arruinar lo que las fuerzas del bien han inventado o construido" J.R.R Tolkien</p>
+</div></footer>
+
+<script>
+(function(){
+  var ICON={
+    dl:'<path d="M12 4v11"/><path d="m7 11 5 5 5-5"/><path d="M5 20h14"/>',
+    ext:'<path d="M14 5h5v5"/><path d="M19 5 10 14"/><path d="M18 14v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h4"/>',
+    ig:'<rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.8" cy="7.2" r=".6" fill="currentColor"/>'
+  };
+  function svg(k){var s=document.createElementNS('http://www.w3.org/2000/svg','svg');s.setAttribute('class','i');s.setAttribute('viewBox','0 0 24 24');s.setAttribute('aria-hidden','true');s.innerHTML=ICON[k];return s}
+  function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+  function read(id){try{return JSON.parse(document.getElementById(id).textContent)}catch(e){return []}}
+  function hue(s){var h=0;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))%360;return h}
+  function grad(s){var h=hue(s);return 'linear-gradient(155deg,hsl('+h+' 45% 28%),hsl('+((h+50)%360)+' 50% 14%))'}
+  function ext(a){a.target='_blank';a.rel='noopener noreferrer'}
+  function initials(n){return n.split(/[\s–-]+/).filter(Boolean).slice(0,2).map(function(w){return w[0]}).join('').toUpperCase()}
+  function handle(u){var m=u.match(/instagram\.com\/([^\/?#]+)/);return m?'@'+m[1]:'Instagram'}
+  function host(u){try{return new URL(u).hostname.replace(/^www\./,'')}catch(e){return ''}}
+
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+  var studios=read('data-studios'),games=shuffle(read('data-games'));
+  var byId={};studios.forEach(function(s){byId[s.id]=s});
+
+  var gBox=document.getElementById('games');
+  games.forEach(function(g){
+    var st=byId[g.studio],author=st?st.name:(g.author||'');
+    var c=el('article','card');
+    var cv=el('div','cover');
+    if(g.cover){var im=el('img');im.src=g.cover;im.alt='Portada de '+g.title;im.loading='lazy';im.decoding='async';cv.appendChild(im);im.onerror=function(){im.remove();var p=el('div','ph',g.title);p.style.background=grad(g.title);cv.insertBefore(p,cv.firstChild)}}
+    else{var ph=el('div','ph',g.title);ph.style.background=grad(g.title);cv.appendChild(ph)}
+    if(g.demo)cv.appendChild(el('span','tag','Demostración'));
+    var b=el('div','body');
+    b.appendChild(el('h3',null,g.title));
+    if(author)b.appendChild(el('span','author',author));
+    if(g.desc)b.appendChild(el('p','desc',g.desc));
+    b.appendChild(el('span','spacer'));
+    var a=el('a','btn primary');
+    if(g.url){a.href=g.url;ext(a);a.setAttribute('aria-label','Descargar juego '+g.title+' (se abre en una pestaña nueva)');a.appendChild(svg('dl'));a.appendChild(document.createTextNode('DESCARGAR JUEGO'))}
+    else{a.setAttribute('aria-disabled','true');a.setAttribute('role','link');a.appendChild(document.createTextNode('Enlace pendiente'))}
+    b.appendChild(a);c.appendChild(cv);c.appendChild(b);gBox.appendChild(c);
+  });
+
+  var rail=gBox,paused=false;
+  function step(d){var w=(rail.firstElementChild?rail.firstElementChild.offsetWidth:240)+20;var end=rail.scrollLeft+rail.clientWidth>=rail.scrollWidth-4;if(d>0&&end)rail.scrollTo({left:0,behavior:'smooth'});else rail.scrollBy({left:d*w,behavior:'smooth'})}
+  document.getElementById('prev').onclick=function(){step(-1)};
+  document.getElementById('next').onclick=function(){step(1)};
+  ['mouseenter','focusin','touchstart'].forEach(function(e){rail.addEventListener(e,function(){paused=true},{passive:true})});
+  ['mouseleave','focusout'].forEach(function(e){rail.addEventListener(e,function(){paused=false})});
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(function(){if(!paused&&!document.hidden)step(1)},4500);
+
+  var sBox=document.getElementById('studios');
+  studios.forEach(function(s){
+    var c=el('article','card studio');
+    var top=el('div','s-top');
+    var lg=el('div','logo');
+    if(s.logo){var im=el('img');im.src=s.logo;im.alt='Logo de '+s.name;im.loading='lazy';lg.appendChild(im)}
+    else{lg.textContent=initials(s.name);lg.style.background=grad(s.name);lg.setAttribute('aria-hidden','true')}
+    top.appendChild(lg);top.appendChild(el('h3',null,s.name));
+    c.appendChild(top);
+    c.appendChild(el('p','desc',s.desc||'Estudio independiente de la escena rolera argentina.'));
+    c.appendChild(el('span','spacer'));
+    var ac=el('div','actions');
+    (s.links||[]).forEach(function(l){
+      var a=el('a','btn '+(l.type==='web'?'primary':'ghost'));a.href=l.url;ext(a);
+      if(l.type==='web'){
+        a.style.marginTop='0';
+        a.setAttribute('aria-label','Ver juegos de '+s.name+' en '+host(l.url)+' (se abre en una pestaña nueva)');
+        a.appendChild(svg('ext'));a.appendChild(document.createTextNode('Ver sus juegos'));
+      }else{
+        var t=l.label||handle(l.url);
+        a.setAttribute('aria-label','Instagram de '+s.name+': '+t+' (se abre en una pestaña nueva)');
+        a.appendChild(svg('ig'));a.appendChild(document.createTextNode(t));
+      }
+      ac.appendChild(a);
+    });
+    c.appendChild(ac);sBox.appendChild(c);
+  });
+})();
+</script>
+</body>
+</html>
