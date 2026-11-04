@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Juegos de rol hechos en Argentina</title>
+<title>🇦🇷 Rol Argentino</title>
 <meta name="description" content="Vidriera de juegos de rol de mesa independientes de Argentina: descubrí juegos, descargalos y conocé a sus creadores.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,7 +45,21 @@
   {"type":"instagram","url":"https://www.instagram.com/entregallos.co/"}]},
  {"id":"krozmic","name":"Krozmic","logo":"https://img.itch.zone/aW1nLzI5NzQ4MzM5LnBuZw==/80x80%23/XiUbTx.png","desc":"Ilustrador Freelance, Artista Digital, Diseñador.","links":[
   {"type":"web","url":"https://krozmic.itch.io/elxir-hadamuerte"},
-  {"type":"instagram","url":"https://www.instagram.com/krozmic.art/"}]}
+  {"type":"instagram","url":"https://www.instagram.com/krozmic.art/"}]},
+ {"id":"yudipuff","name":"YudiPuff","logo":"https://img.itch.zone/aW1nLzI0NTg0OTc2LmpwZw==/80x80%23/UDSbP5.jpg","desc":"ROL para todas las edades","links":[
+  {"type":"web","url":"https://www.instagram.com/yudipuff/"},
+  {"type":"instagram","url":"https://www.instagram.com/yudipuff/"}]},
+ {"id":"rolesencia","name":"Rolesencia","logo":"https://img.itch.zone/aW1nLzcxODY0OTUuanBn/80x80%23/d9DBb%2F.jpg","desc":"Dirección, Diseño y Divulgación. Desarrollando herramientas para tu mesa","links":[
+  {"type":"web","url":"https://itch.io/profile/rolesencia"},
+  {"type":"instagram","url":"https://www.instagram.com/rolesencia/"}]},
+ {"id":"tinasuch","name":"Tina Such","logo":"https://ugc.production.linktr.ee/8106f925-1c74-4a9c-83dc-e7693254c217_Verde-y-negro.jpeg?io=true&size=avatar-v3_0","desc":"Dungeon Mommy. Escribo y enseño Juegos de Rol","links":[
+  {"type":"web","url":"https://dungeon-mommy.itch.io/"},
+  {"type":"instagram","url":"https://www.instagram.com/tinasuch/"}]},
+ {"id":"elvis","name":"Juan Elvis Pereyra","logo":"https://dadomanija.com/img/autores/juan-elvis-pereyra-elvis.jpg","desc":"Diseñador de juegos, productor de cine, fan del género fantastico y trotskista freelance","links":[
+  {"type":"web","url":"https://territoriozombie.itch.io/"},
+  {"type":"instagram","url":"https://www.instagram.com/territoriozombiejdr/"}]}
+ 
+ 
 ]
 </script>
 <!-- JUEGOS: "demo":true marca contenido de ejemplo. Reemplazar por juegos reales:
@@ -61,7 +75,9 @@
  {"title":"Furia Verde","studio":"ikigai","desc":"","cover":"https://img.itch.zone/aW1nLzMwMDc1MTM1LnBuZw==/original/Zfqv2y.png","url":"https://dest-er.itch.io/furia-verde"},
  {"title":"Dracma","studio":"merilin","desc":"","cover":"https://img.itch.zone/aW1hZ2UvNTAzMzc3OC8zMDE0MTU3OC5wbmc=/347x500/J0uW7E.png","url":"https://merilin-creative.itch.io/dracma"},
  {"title":"Gyro","studio":"gimenez","desc":"","cover":"https://img.itch.zone/aW1hZ2UvNTAzNDA0My8zMDE0MzMwNi5qcGc=/original/gjsf2L.jpg","url":"https://tgimenezrgm.itch.io/gyro"},
- {"title":"Colección Espadas","studio":"dadosndrama","desc":"","cover":"https://img.itch.zone/aW1nLzI3MDQwNTk2LnBuZw==/347x500/zozhqN.png","url":"https://dadosndrama.itch.io/espadas-coleccion-uno"}
+ {"title":"Colección Espadas","studio":"dadosndrama","desc":"","cover":"https://img.itch.zone/aW1nLzI3MDQwNTk2LnBuZw==/347x500/zozhqN.png","url":"https://dadosndrama.itch.io/espadas-coleccion-uno"},
+ {"title":"Spokon","studio":"rolesencia","desc":"","cover":"https://img.itch.zone/aW1nLzE4Nzk5MTY5LmpwZw==/original/iOIgPY.jpg","url":"https://rolesencia.itch.io/spokon"},
+ {"title":"Territorio Zombie","studio":"elvis","desc":"","cover":"https://img.itch.zone/aW1nLzIxNzQ3OTk1LmpwZWc=/original/muQAIE.jpeg","url":"https://territoriozombie.itch.io/berazateguiterritoriozombie"}
 ]
 </script>
 <!-- ============ FIN DE DATOS ============ -->
@@ -105,7 +121,13 @@ h2{font-size:clamp(1.9rem,5vw,3.2rem)}
 .games{display:flex;gap:1.25rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:.25rem}
 .games::-webkit-scrollbar{display:none}
 .games .card{flex:0 0 min(78%,240px);scroll-snap-align:start}
-.rail-ctl{display:flex;justify-content:flex-end;gap:.5rem;margin-bottom:1rem}
+.rail-bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1rem}
+.rail-ctl{display:flex;gap:.5rem}
+.rail-ctl[hidden]{display:none}
+.games.open{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));overflow:visible;scroll-snap-type:none}
+.games.open .card{flex:none}
+.more .btn svg{transition:transform .25s}
+.more .btn[aria-expanded="true"] svg{transform:rotate(180deg)}
 .rail-ctl button{width:44px;height:44px;border-radius:8px;border:1px solid var(--line);background:transparent;color:var(--text);display:grid;place-items:center;cursor:pointer;transition:border-color .2s,color .2s}
 .rail-ctl button:hover{border-color:var(--accent);color:var(--accent)}
 .studios{grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
@@ -165,14 +187,17 @@ footer p{margin:0;max-width:60ch}
 
   <section class="block" id="juegos" aria-labelledby="t-juegos"><div class="wrap">
     <div class="sec-head"><h2 id="t-juegos" class="sr" style="position:absolute;left:-9999px">Juegos</h2></div>
-    <div class="rail-ctl"><button type="button" id="prev" aria-label="Juegos anteriores"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button><button type="button" id="next" aria-label="Juegos siguientes"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button></div>
+    <div class="rail-bar">
+      <div class="more"><button type="button" class="btn ghost" id="toggle-all" aria-expanded="false" aria-controls="games"><span>VER TODOS LOS JUEGOS</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></div>
+      <div class="rail-ctl"><button type="button" id="prev" aria-label="Juegos anteriores"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button><button type="button" id="next" aria-label="Juegos siguientes"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button></div>
+    </div>
     <div class="games" id="games" role="region" aria-label="Juegos destacados"></div>
   </div></section>
 
   <section class="block" id="creadores" aria-labelledby="t-creadores"><div class="wrap">
     <div class="sec-head">
       <h2 id="t-creadores">Conocé a sus creadores</h2>
-      <p>Detrás de cada juego hay un equipo de personas creando mundos, historias y experiencias. Conocé los estudios y colectivos independientes que forman parte de la escena rolera argentina.</p>
+      <p>Detrás de cada juego hay un equipo de personas creando mundos, historias y experiencias. Conocé los estudios y colectivos independientes que forman parte de la escena rolera argentina y descarga todos sus juegos.</p>
     </div>
     <div class="grid studios" id="studios"></div>
   </div></section>
@@ -180,6 +205,7 @@ footer p{margin:0;max-width:60ch}
 
 <footer><div class="wrap">
 <p>Todos estos juegos fueron hechos por humanos.</p>
+<p>Si queres que tu juego aparezca en la web escribe a: merilincreativestudio@gmail.com o por <a href="https://www.instagram.com/merilincreativestudio/" target="_blank">Instagram</a></p>
   <p>"El mal no puede crear nada nuevo, solo corromper o arruinar lo que las fuerzas del bien han inventado o construido" J.R.R Tolkien</p>
 </div></footer>
 
@@ -229,7 +255,16 @@ footer p{margin:0;max-width:60ch}
   document.getElementById('next').onclick=function(){step(1)};
   ['mouseenter','focusin','touchstart'].forEach(function(e){rail.addEventListener(e,function(){paused=true},{passive:true})});
   ['mouseleave','focusout'].forEach(function(e){rail.addEventListener(e,function(){paused=false})});
-  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(function(){if(!paused&&!document.hidden)step(1)},4500);
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(function(){if(!paused&&!document.hidden&&!rail.classList.contains('open'))step(1)},4500);
+
+  var tg=document.getElementById('toggle-all'),ctl=document.querySelector('.rail-ctl');
+  tg.onclick=function(){
+    var open=rail.classList.toggle('open');
+    tg.setAttribute('aria-expanded',open);
+    tg.firstElementChild.textContent=open?'VER MENOS':'VER TODOS LOS JUEGOS';
+    ctl.hidden=open;
+    if(!open){rail.scrollLeft=0;document.getElementById('juegos').scrollIntoView({behavior:'smooth'})}
+  };
 
   var sBox=document.getElementById('studios');
   studios.forEach(function(s){
@@ -260,5 +295,8 @@ footer p{margin:0;max-width:60ch}
   });
 })();
 </script>
+</body>
+</html>
+
 </body>
 </html>
